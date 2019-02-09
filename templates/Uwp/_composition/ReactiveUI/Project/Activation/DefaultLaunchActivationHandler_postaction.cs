@@ -9,7 +9,7 @@
         {
             get
             {
-                return ViewModels.ViewModelLocator.Current.GetInstance<NavigationServiceEx>();
+                return ViewModels.ViewModelLocator.Current.NavigationService;
             }
         }
 

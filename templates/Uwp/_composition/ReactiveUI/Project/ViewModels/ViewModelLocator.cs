@@ -4,7 +4,6 @@ using System.Linq;
 using System.Linq.Expressions;
 using System.Reflection;
 
-using CommonServiceLocator;
 using Param_RootNamespace.Services;
 using Param_RootNamespace.Views;
 
@@ -16,6 +15,10 @@ namespace Param_RootNamespace.ViewModels
     [Windows.UI.Xaml.Data.Bindable]
     public class ViewModelLocator
     {
+        private static ViewModelLocator _current;
+        public static ViewModelLocator Current => _current ?? (_current = new ViewModelLocator());
+
+
         public ViewModelLocator()
         {
             Locator.CurrentMutable.InitializeSplat();

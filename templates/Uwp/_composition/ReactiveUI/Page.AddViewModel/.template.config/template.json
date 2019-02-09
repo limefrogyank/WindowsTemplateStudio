@@ -11,8 +11,8 @@
     "wts.platform": "Uwp",
     "wts.version": "1.0.0",
     "wts.compositionFilter": "$framework == ReactiveUI & wts.type==page & identity != wts.Page.MediaPlayer",
-    "wts.export.baseclass": "ViewModelBase",
-    "wts.export.setter": "Set"
+    "wts.export.baseclass": "ReactiveObject",
+    "wts.export.setter": "this.RaiseAndSetIfChanged"
   },
   "sourceName": "wts.ItemName",
   "preferNameDirectory": true,

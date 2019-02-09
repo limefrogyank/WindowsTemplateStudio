@@ -3,7 +3,7 @@ using System.Collections.ObjectModel;
 using System.Linq;
 using System.Reactive;
 using System.Windows.Input;
-using CommonServiceLocator;
+//using CommonServiceLocator;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Navigation;
@@ -28,11 +28,11 @@ namespace wts.ItemName.ViewModels
             set { this.RaiseAndSetIfChanged(ref _selected, value); }
         }
 
-        public ReactiveCommand<WinUI.NavigationViewItemInvokedEventArgs, Unit> ItemInvokedCommand { get; }
+        public ReactiveCommand<NavigationViewItemInvokedEventArgs, Unit> ItemInvokedCommand { get; }
 
         public ShellViewModel()
         {
-            ItemInvokedCommand = ReactiveCommand.Create<WinUI.NavigationViewItemInvokedEventArgs>(OnItemInvoked);
+            ItemInvokedCommand = ReactiveCommand.Create<NavigationViewItemInvokedEventArgs>(OnItemInvoked);
         }
 
         public void Initialize(Frame frame, NavigationView navigationView)
