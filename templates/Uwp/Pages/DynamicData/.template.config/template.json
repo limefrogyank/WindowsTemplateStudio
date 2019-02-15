@@ -1,0 +1,55 @@
+﻿{
+  "author": "Microsoft",
+  "classifications": [
+    "Universal"
+  ],
+  "name": "DynamicData",
+  "groupIdentity": "wts.Page.DynamicData",
+  "identity": "wts.Page.DynamicData",
+  "description": "A page displaying a list of data that can be sorted and filtered dynamically using DynamicData.",
+  "tags": {
+    "language": "C#",
+    "type": "item",
+    "wts.type": "page",
+    "wts.framework": "ReactiveUI",
+    "wts.platform": "Uwp",
+    "wts.version": "1.0.0",
+    "wts.displayOrder": "10",
+    "wts.licenses": "[Microsoft.Toolkit.Uwp](https://github.com/Microsoft/WindowsCommunityToolkit/blob/master/license.md), [DynamicData](https://github.com/RolandPheasant/DynamicData/blob/master/LICENSE)",
+    "wts.dependencies": "wts.Feat.SampleDataService",
+    "wts.genGroup": "0",
+    "wts.isHidden": "false",
+    "wts.rightClickEnabled": "true"
+  },
+  "sourceName": "DynamicData",
+  "preferNameDirectory": true,
+  "PrimaryOutputs": [
+    {
+      "path": ".\\Views\\DynamicDataPage.xaml"
+    },
+    {
+      "path": ".\\Views\\DynamicDataPage.xaml.cs"
+    },
+    {
+      "path": ".\\ViewModels\\DynamicDataViewModel.cs"
+    }
+  ],
+  "symbols": {
+    "wts.rootNamespace": {
+      "type": "parameter",
+      "replaces": "Param_RootNamespace"
+    },
+    "wts.itemNamespace": {
+      "type": "parameter",
+      "replaces": "Param_ItemNamespace"
+    },
+    "baseclass": {
+      "type": "parameter",
+      "replaces": "System.ComponentModel.INotifyPropertyChanged"
+    },
+    "setter": {
+      "type": "parameter",
+      "replaces": "Param_Setter"
+    }
+  }
+}
